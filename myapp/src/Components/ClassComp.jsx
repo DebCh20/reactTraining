@@ -12,6 +12,19 @@ export default class ClassComp extends Component {
   //   changePlace() {
   //     this.setState({ place: "Pune" });
   //   }
+
+  componentDidMount(){
+    console.log('component is mounted');
+  }
+
+  componentDidUpdate(){
+    console.log('component is updated');
+  }
+
+  componentWillUnmount(){
+    console.log('component is unmounted');
+  }
+
   changePlace = () => {
     if(this.state.place == 'Bangalore')
     this.setState({ place: "Mumbai" });
@@ -19,6 +32,7 @@ export default class ClassComp extends Component {
     this.setState({ place: "Bangalore" });
   };
   render() {
+    console.log('component is rendering');
     return (
       <div>
         <h1>Class Component</h1>

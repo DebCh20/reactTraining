@@ -24,6 +24,21 @@ function Header() {
         <li className="nav-item">          
         <Link className="nav-link active" to='/classcomp' >class component</Link>
         </li>       
+        <li className="nav-item">          
+        <Link className="nav-link active" to='/LifecycleFunc' >lifecycle function</Link>
+        </li>       
+        <li className="nav-item">          
+        <Link className="nav-link active" to='/Lifecycle' >lifecycle</Link>
+        </li>       
+        <li className="nav-item">          
+        <Link className="nav-link active" to='/Form' >Forms</Link>
+        </li>       
+        <li className="nav-item">          
+        <Link className="nav-link active" to='/todolist' >todolist</Link>
+        </li>       
+        <li className="nav-item">          
+        <Link className="nav-link active" to='/redux' >redux</Link>
+        </li>       
       </ul> 
     </nav>
     </div>

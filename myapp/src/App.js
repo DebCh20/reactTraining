@@ -9,6 +9,11 @@ import RegularPassport from './PassportPage/RegularPassport.jsx';
 import Talkal from './PassportPage/Talkal.jsx';
 import ProductDetail from './ProductsPage/ProductDetail.jsx';
 import ClassComp from './Components/ClassComp.jsx';
+import LifecycleFunc from './Components/LifecycleFunc.jsx';
+import LifeCycle from './Components/LifeCycle.jsx';
+import Forms from './Form/Form.jsx';
+import Todolist from './Todolist/Todolist.jsx';
+import Redux from './redux/Redux.jsx';
 function App() {
   return (
     <div className="App">    
@@ -19,6 +24,11 @@ function App() {
       <Route path='/Increment' element={<Increment/>} ></Route>      
       <Route path='/prodGall' element={<ProductGallery/>} ></Route>      
       <Route path='/classcomp' element={<ClassComp/>} ></Route>      
+      <Route path='/lifecycleFunc' element={<LifecycleFunc/>} ></Route>      
+      <Route path='/lifecycle' element={<LifeCycle/>} ></Route>      
+      <Route path='/Form' element={<Forms/>} ></Route>      
+      <Route path='/todolist' element={<Todolist/>} ></Route>      
+      <Route path='/redux' element={<Redux/>} ></Route>      
       <Route path='/passport' element={<Passport/>} >
             <Route path='/passport/regular' element={<RegularPassport/>} ></Route>
             <Route path='/passport/tatkal' element={<Talkal/>} ></Route>

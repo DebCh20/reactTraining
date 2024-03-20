@@ -1,18 +1,27 @@
 import React from 'react'
 import { Routes, Route, useParams } from 'react-router-dom';
 import product from './product';
+import { useState, useEffect } from 'react';
+import axios from 'axios'
 
 function ProductDetail() {
     let { prodid } = useParams();
-  let products = product.find((item) => item.id == prodid);
+    let [data,setData]=useState([])
+
+    useEffect(()=>{
+      axios.get('https://fakestoreapi.com/products/'+prodid)
+        .then((resp)=>{setData(resp.data)})
+        .catch((err)=>{console.log(err)});  
+     },[]);
+
   return (
     <div>
       <h1>Product Detail</h1>
       <br/>
-      <img src={products.image} className="card-img-top" alt="..." style={{height: '10rem', width: '10rem'}}/>
+      <img src={data.image} className="card-img-top" alt="..." style={{height: '10rem', width: '10rem'}}/>
       <h3>Product id: {prodid}</h3>
-      <h3>Title: {products.title}</h3>
-      <h3>Price: Rs. {products.price}</h3>
+      <h3>Title: {data.title}</h3>
+      <h3>Price: Rs. {data.price}</h3>
     </div>
   );
 }
